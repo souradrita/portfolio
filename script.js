@@ -1,56 +1,38 @@
-//fixed header
+// FIXED HEADER
+window.addEventListener("scroll", () => {
+  document.querySelector("header")
+    .classList.toggle("fixed", window.scrollY > 100);
+});
 
+// NAVBAR
+const navLinks = document.querySelectorAll(".navbar a");
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.forEach(l => l.classList.remove("active"));
+    link.classList.add("active");
+    document.querySelector(".navbar").classList.remove("show");
+  });
+});
 
-window.onscroll = function()
-{
-    const docScrollTop = document.documentElement.scrollTop;
+// HAMBURGER
+document.querySelector(".ham-burger").addEventListener("click", () => {
+  document.querySelector(".navbar").classList.toggle("show");
+});
 
-    if(window.innerWidth > 991)
-    {
-        if(docScrollTop > 100)
-        {
-            document.querySelector('header').classList.add("fixed")
-            
-        }
-        else
-        {
-            document.querySelector('header').classList.remove("fixed")
+// DARK MODE
+const themeBtn = document.querySelector(".theme-toggle");
+themeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  themeBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+});
 
-        }
+// SCROLL ANIMATION
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate");
     }
+  });
+}, { threshold: 0.2 });
 
-    
-}
-
-
-
-//nav bar links
-
-
-const navbar = document.querySelector('.navbar');
- let a = navbar.querySelectorAll('a');
-    
- a.forEach(function(item)
- {
-     item.addEventListener('click',function()
-         {    
-             for(let i=0;i<a.length;i++)
-             {
-                 a[i].classList.remove('active')
-             }
-             this.classList.add('active')
-     document.querySelector('.navbar').classList.toggle('show');
-
-         }
-     )
- })
- 
-
-
- //hamburger
- const hamBurger = document.querySelector('.ham-burger');
-
- hamBurger.addEventListener('click',function()
- {
-     document.querySelector('.navbar').classList.toggle('show');
- })
+document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
