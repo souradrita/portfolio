@@ -1,37 +1,33 @@
-// FIXED HEADER
+// HEADER STICKY
 window.addEventListener("scroll", () => {
-  document.querySelector("header")
-    .classList.toggle("fixed", window.scrollY > 100);
+  document.querySelector("header").classList.toggle("fixed", window.scrollY > 100);
 });
 
-// NAVBAR
-const navLinks = document.querySelectorAll(".navbar a");
-navLinks.forEach(link => {
+// NAVBAR LINK ACTIVE
+document.querySelectorAll(".navbar a").forEach(link => {
   link.addEventListener("click", () => {
-    navLinks.forEach(l => l.classList.remove("active"));
+    document.querySelectorAll(".navbar a").forEach(l => l.classList.remove("active"));
     link.classList.add("active");
     document.querySelector(".navbar").classList.remove("show");
   });
 });
 
-// HAMBURGER
+// HAMBURGER MENU
 document.querySelector(".ham-burger").addEventListener("click", () => {
   document.querySelector(".navbar").classList.toggle("show");
 });
 
-// DARK MODE
-const themeBtn = document.querySelector(".theme-toggle");
-themeBtn.addEventListener("click", () => {
+// DARK MODE TOGGLE
+const btn = document.querySelector(".theme-toggle");
+btn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
-  themeBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+  btn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
 });
 
 // SCROLL ANIMATION
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("animate");
-    }
+    if (entry.isIntersecting) entry.target.classList.add("animate");
   });
 }, { threshold: 0.2 });
 
