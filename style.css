@@ -129,12 +129,36 @@ h1 {
   border-radius: 6px;
   border: 1px solid #ccc;
 }
-.about-me .img img {
-  border-radius: 12px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-  transition: transform 0.4s ease;
+
+/* ---------- Social Links Enhancement ---------- */
+
+.about-me .social-link {
+  margin-top: 35px;
+  display: flex;
+  gap: 18px;            /* spacing between icons */
 }
 
-.about-me .img img:hover {
-  transform: scale(1.03);
+.about-me .social-link a {
+  width: 45px;
+  height: 45px;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.about-me .social-link a .fa {
+  font-size: 20px;      /* bigger icon */
+  color: #fff;
+}
+
+.about-me .social-link a:hover {
+  background-color: rgb(255, 247, 28);
+  transform: translateY(-4px);
+}
+
+.about-me .social-link a:hover .fa {
+  color: #000;
 }
