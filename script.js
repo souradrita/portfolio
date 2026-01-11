@@ -3,19 +3,16 @@ window.addEventListener("scroll", () => {
   document.querySelector("header").classList.toggle("fixed", window.scrollY > 100);
 });
 
-// NAVBAR LINK ACTIVE
-document.querySelectorAll(".navbar a").forEach(link => {
-  link.addEventListener("click", () => {
-    document.querySelectorAll(".navbar a").forEach(l => l.classList.remove("active"));
-    link.classList.add("active");
-    document.querySelector(".navbar").classList.remove("show");
-  });
-});
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    window.scrollTo({
+      top: section.offsetTop - 60,
+      behavior: 'smooth'
+    });
+  }
+}
 
-// HAMBURGER MENU
-document.querySelector(".ham-burger").addEventListener("click", () => {
-  document.querySelector(".navbar").classList.toggle("show");
-});
 
 // DARK MODE TOGGLE
 const btn = document.querySelector(".theme-toggle");

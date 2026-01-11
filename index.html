@@ -1,191 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Souradrita Sarkar | Software Engineer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Software Engineer at JP Morgan Chase | Portfolio">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Souradrita Sarkar | Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
 
-<!-- HEADER -->
-<header>
-  <div class="container">
-    <div class="row">
-      <a href="#home" class="logo">Souradrita</a>
-      <div class="ham-burger"><i class="fa fa-bars"></i></div>
-      <div class="navbar">
-        <ul>
-          <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+  <!-- Navbar -->
+  <nav>
+    <h2 class="logo">Souradrita</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <img src="profile.jpg" alt="Souradrita Sarkar" class="profile-img">
+      <div class="hero-text">
+        <h1>Hi, I'm <span>Souradrita Sarkar</span></h1>
+        <p>Software Engineer | DSA | System Design</p>
+        <button onclick="scrollToSection('contact')">Contact Me</button>
       </div>
     </div>
-  </div>
-</header>
+  </section>
 
-<!-- HOME -->
-<section class="home reveal" id="home">
-  <div class="container">
-    <h1>Souradrita Sarkar</h1>
-    <h3>Software Engineer | Backend & Distributed Systems</h3>
-  </div>
-</section>
+  <!-- About -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I am a Software Engineer passionate about building scalable systems,
+      solving complex problems, and creating content to help others in their tech journey.
+      Currently, I’m part of J.P. Morgan Chase’s Paze digital wallet team, building next-gen
+      contactless payment solutions.
+    </p>
+  </section>
 
-<!-- ABOUT -->
-<section class="about-me reveal" id="about">
-  <div class="container">
-    <div class="row">
-      <div class="section-title text-center">
-        <h1>About Me</h1>
-        <p class="small text-uppercase">Who I Am</p>
+  <!-- Experience -->
+  <section id="experience" class="section">
+    <h2>Experience</h2>
+
+    <div class="experience-card">
+      <h3>JP Morgan Chase | Software Engineer II</h3>
+      <span>Bengaluru, India | Sept 2025 – Present</span>
+      <ul>
+        <li>Contributed to next-gen contactless payment platform (Paze) competing with Apple Pay and Google Pay.</li>
+        <li>Implemented Kafka event recovery retry mechanism with DB audit trail for wallet provisioning flows.</li>
+        <li>Optimized SQL using conditional aggregation & composite indexes, reducing failed-event identification time.</li>
+        <li>Developed batch reprocessing pipeline, cutting DB round-trips by 60–70% for historic failed events.</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <h3>Hewlett Packard Enterprise | Software Engineer II</h3>
+      <span>Bengaluru, India | Oct 2024 – Sept 2025</span>
+      <ul>
+        <li>Used Kafka (MSK) and Redis for real-time device messaging and connectivity management.</li>
+        <li>Built Spring Boot RESTful APIs for real-time iLO device metrics.</li>
+        <li>Maintained Grafana dashboards for system performance monitoring.</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <h3>Hewlett Packard Enterprise | Software Engineer I</h3>
+      <span>Bengaluru, India | Aug 2022 – Oct 2024</span>
+      <ul>
+        <li>Worked on TMP (Telco Media Platform) enabling voice/video services over LTE/5G.</li>
+        <li>Enhanced SNMP & Fluentd traps, improving event detection by 20%.</li>
+        <li>Converted monolithic product to microservices, deployed via Docker & Kubernetes.</li>
+        <li>POCs for live speech transcription using ML for real-time multi-language support.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <span>Java</span>
+      <span>Python</span>
+      <span>JavaScript</span>
+      <span>Spring Boot</span>
+      <span>Kubernetes</span>
+      <span>Docker</span>
+      <span>Kafka</span>
+      <span>Redis</span>
+      <span>PostgreSQL</span>
+      <span>AWS</span>
+      <span>DSA</span>
+      <span>System Design</span>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <h2>Projects & Publications</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Centralized Indexed Logging & Reporting (EFK Stack)</h3>
+        <p>Implemented log streaming, filtering, indexing, and visualization using Fluentd, Elasticsearch, and Kibana.</p>
+      </div>
+      <div class="project-card">
+        <h3>Emotion Recognition for Schizophrenia Patients</h3>
+        <p>Designed CNN-based system to analyze video footage of patients playing video games to report emotional changes.</p>
+      </div>
+      <div class="project-card">
+        <h3>Scam Detection in Voice Calls (HPE TMP)</h3>
+        <p>Developed real-time Python system to prevent voice call scams approved for global deployment.</p>
+      </div>
+      <div class="project-card">
+        <h3>Facial Emotion Detection Using CNN</h3>
+        <p>Used Inception ResNet V2 & Xception architectures to predict emotions from video input with graphical reporting.</p>
+        <a href="https://www.inderscience.com/info/inarticle.php?artid=124351" target="_blank">Publication Link</a>
       </div>
     </div>
+  </section>
 
-    <div class="row about-content">
-      <!-- IMAGE -->
-      <div class="img">
-        <img src="images/about.jpg" alt="Souradrita Sarkar">
-      </div>
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2>Contact & Links</h2>
+    <p>Email: <a href="mailto:souradrita123@gmail.com">souradrita123@gmail.com</a></p>
+    <p>Phone: +91 9612895479</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/souradrita1/" target="_blank">linkedin.com/in/souradrita1</a></p>
+    <p>YouTube: <a href="https://www.youtube.com/@SouradritaSarkar_jpmc" target="_blank">SouradritaSarkar_jpmc</a></p>
+    <p>Topmate Services: <a href="https://www.topmate.io/" target="_blank">1:1 Mentorship</a></p>
+  </section>
 
-      <!-- TEXT -->
-      <div class="text">
-        <h4>I’m Souradrita Sarkar</h4>
-        <h6>Software Engineer | Backend & Distributed Systems</h6>
+  <footer>
+    <p>© 2026 Souradrita Sarkar</p>
+  </footer>
 
-        <p>
-          I am a Software Engineer at JP Morgan Chase with strong experience in
-          backend development, distributed systems, and scalable microservices.
-        </p>
-
-        <p>
-          I actively mentor students and professionals for DSA, System Design,
-          and interview preparation.
-        </p>
-
-        <!-- SOCIAL LINKS -->
-        <div class="social-link">
-  <a href="https://www.linkedin.com/in/souradrita1/" target="_blank">
-    <i class="fa fa-linkedin"></i>
-  </a>
-  <a href="https://www.youtube.com/@SouradritaSarkar_jpmc" target="_blank">
-    <i class="fa fa-youtube"></i>
-  </a>
-  <a href="https://topmate.io/souradrita_sarkar/" target="_blank">
-    <i class="fa fa-user-circle"></i>
-  </a>
-</div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- EDUCATION -->
-<section id="education" class="reveal">
-  <div class="container">
-    <h1>Education</h1>
-    <div class="education-block">
-      <h3>PSG College Of Technology</h3>
-      <span>2018 – 2022</span>
-      <h4>B.Tech – Computer Science (GPA: 9.05)</h4>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience" class="reveal">
-  <div class="container">
-    <h1>Experience</h1>
-    <div class="education-block">
-      <h3>JP Morgan Chase</h3>
-      <span>2025 – Present</span>
-      <h4>Software Engineer II</h4>
-    </div>
-    <div class="education-block">
-      <h3>Hewlett Packard Enterprise</h3>
-      <span>2022 – 2025</span>
-      <h4>Software Engineer</h4>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="projects reveal">
-  <div class="container">
-    <h1>Projects</h1>
-    <div class="project-grid">
-      <div class="project-card">EFK Centralized Logging</div>
-      <div class="project-card">Scam Detection System</div>
-      <div class="project-card">Emotion Recognition (CNN)</div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="reveal">
-  <div class="container">
-    <h1>Services</h1>
-    <div class="services-grid">
-      <div class="service-box">
-        <i class="fa fa-laptop"></i>
-        <h5>Web Development</h5>
-        <p>Designing responsive and modern web apps.</p>
-      </div>
-      <div class="service-box">
-        <i class="fa fa-code"></i>
-        <h5>Backend Engineering</h5>
-        <p>APIs, scalable services with Spring Boot, Kafka.</p>
-      </div>
-      <div class="service-box">
-        <i class="fa fa-calendar"></i>
-        <h5>1:1 Mentoring</h5>
-        <p><a href="https://topmate.io/souradrita_sarkar/" target="_blank">Book on Topmate</a></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GALLERY -->
-<div class="wrapper" id="gallery">
-  <div class="section-title text-center">
-    <h1>Gallery</h1>
-    <p class="small text-uppercase">Memories & Work</p>
-  </div>
-  <div class="gallery-grid">
-    <img src="images/gallery/FB_IMG_1590171646420.jpg" alt="Image">
-    <img src="images/gallery/FB_IMG_1590171652320.jpg" alt="Image">
-    <img src="images/gallery/FB_IMG_1590171658184.jpg" alt="Image">
-    <img src="images/gallery/index.jpg" alt="Image">
-  </div>
-</div>
-
-<!-- CONTACT -->
-<section id="contact" class="contact-us reveal">
-  <div class="container">
-    <h1>Contact</h1>
-    <input class="form-control" placeholder="Your Name">
-    <input class="form-control" placeholder="Your Email">
-    <textarea class="form-control" placeholder="Your Message"></textarea>
-  </div>
-</section>
-
-<footer>
-  <p>© 2025 Souradrita Sarkar</p>
-</footer>
-
-<button class="theme-toggle">🌙</button>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
