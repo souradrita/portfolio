@@ -1,137 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Souradrita Sarkar | Software Engineer</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <h2 class="logo">Souradrita</h2>
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+      <h2 class="logo">Souradrita</h2>
 
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-    <button id="themeToggle">🌙</button>
-  </nav>
+      <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </header>
 
   <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="hero-left">
-      <h1>Hi, I’m <span>Souradrita Sarkar</span></h1>
+  <section id="home" class="hero reveal">
+    <div class="hero-text">
+      <h1>
+        Software Engineer <br />
+        <span>@ J.P. Morgan Chase</span>
+      </h1>
       <p>
-        Software Engineer @ J.P. Morgan Chase  
-        <br>DSA • System Design • Backend Engineering
+        Backend Engineering • DSA • System Design <br />
+        Building scalable, real-world systems.
       </p>
 
-      <div class="hero-buttons">
+      <div class="hero-actions">
         <a href="#projects" class="btn primary">View Work</a>
-        <a href="#contact" class="btn secondary">Contact</a>
+        <a href="#contact" class="btn ghost">Contact</a>
       </div>
     </div>
 
-    <div class="hero-right">
-      <img src="profile.jpg" alt="Souradrita Sarkar">
+    <div class="hero-img">
+      <img src="profile.jpg" alt="Souradrita Sarkar" />
     </div>
   </section>
 
   <!-- Experience -->
   <section id="experience" class="section">
-    <h2 class="section-title">Experience</h2>
+    <h2 class="section-title reveal">Experience</h2>
 
-    <div class="row">
-      <div class="card">
+    <div class="timeline">
+      <div class="timeline-item reveal">
         <h3>J.P. Morgan Chase</h3>
-        <span>Software Engineer II | Sept 2025 – Present</span>
+        <span>Software Engineer II • 2025 – Present</span>
         <p>
-          Building next-gen contactless payments (Paze).
-          Designed Kafka retry & recovery pipelines, optimized SQL audits,
-          and improved large-scale provisioning reliability.
+          Building Paze digital wallet. Designed Kafka retry pipelines,
+          optimized SQL audits, and scaled recovery flows for wallet provisioning.
         </p>
       </div>
 
-      <div class="card">
+      <div class="timeline-item reveal">
         <h3>Hewlett Packard Enterprise</h3>
-        <span>Software Engineer II | Oct 2024 – Sept 2025</span>
+        <span>Software Engineer II • 2024 – 2025</span>
         <p>
           Real-time device communication using Kafka (MSK), Redis,
           Spring Boot APIs, and Grafana monitoring.
         </p>
       </div>
 
-      <div class="card">
+      <div class="timeline-item reveal">
         <h3>Hewlett Packard Enterprise</h3>
-        <span>Software Engineer I | Aug 2022 – Oct 2024</span>
+        <span>Software Engineer I • 2022 – 2024</span>
         <p>
-          Built Telco Media Platform services, migrated monolith to microservices,
-          Kubernetes deployments, and ML-based speech transcription POCs.
+          Microservices migration, Kubernetes deployments,
+          SNMP + Fluentd enhancements, ML speech transcription POCs.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="section dark-strip">
-    <h2 class="section-title">Projects & Research</h2>
+  <!-- Projects (Netflix-style row) -->
+  <section id="projects" class="section strip">
+    <h2 class="section-title reveal">Projects</h2>
 
-    <div class="row scroll-row">
-      <div class="poster">
+    <div class="carousel">
+      <div class="card reveal">
         <h3>EFK Logging Platform</h3>
-        <p>Centralized logging with Fluentd, Elasticsearch & Kibana</p>
+        <p>Centralized logging using Fluentd, Elasticsearch & Kibana.</p>
       </div>
 
-      <div class="poster">
-        <h3>Scam Detection</h3>
-        <p>Real-time scam detection during voice calls</p>
+      <div class="card reveal">
+        <h3>Scam Detection System</h3>
+        <p>Real-time voice call scam detection deployed globally.</p>
       </div>
 
-      <div class="poster">
+      <div class="card reveal">
         <h3>Emotion Recognition</h3>
-        <p>CNN-based emotion analysis for schizophrenia patients</p>
+        <p>CNN-based emotion analysis for schizophrenia patients.</p>
       </div>
 
-      <div class="poster">
+      <div class="card reveal">
         <h3>Facial Emotion CNN</h3>
-        <p>Research using Inception ResNet & Xception</p>
+        <p>Research using Inception ResNet & Xception architectures.</p>
       </div>
     </div>
   </section>
 
   <!-- Skills -->
   <section id="skills" class="section">
-    <h2 class="section-title">Skills</h2>
+    <h2 class="section-title reveal">Skills</h2>
 
-    <div class="skills">
-      <span>Java</span>
-      <span>Python</span>
-      <span>Spring Boot</span>
-      <span>Kafka</span>
-      <span>Redis</span>
-      <span>PostgreSQL</span>
-      <span>AWS</span>
-      <span>Docker</span>
-      <span>Kubernetes</span>
-      <span>System Design</span>
-      <span>DSA</span>
+    <div class="chips reveal">
+      <span>Java</span><span>Python</span><span>Spring Boot</span>
+      <span>Kafka</span><span>Redis</span><span>PostgreSQL</span>
+      <span>AWS</span><span>Docker</span><span>Kubernetes</span>
+      <span>System Design</span><span>DSA</span>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="section contact">
-    <h2 class="section-title">Connect With Me</h2>
+  <section id="contact" class="section contact reveal">
+    <h2 class="section-title">Connect</h2>
 
     <div class="links">
       <a href="https://www.linkedin.com/in/souradrita1/" target="_blank">LinkedIn</a>
       <a href="https://www.youtube.com/@SouradritaSarkar_jpmc" target="_blank">YouTube</a>
-      <a href="https://www.linkedin.com/in/souradrita1/" target="_blank">Topmate Mentorship</a>
+      <a href="https://www.linkedin.com/in/souradrita1/" target="_blank">Topmate</a>
     </div>
   </section>
 
