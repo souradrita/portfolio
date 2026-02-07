@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Souradrita Sarkar | Software Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56,189,248,0.15);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(56,189,248,0.15), transparent 40%),
+                  radial-gradient(800px 400px at 90% 10%, rgba(99,102,241,0.15), transparent 40%),
+                  linear-gradient(180deg, #020617, #0b1220);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--text); text-decoration: none; }
+    .container { max-width: 1100px; margin: auto; padding: 32px; }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(2,6,23,0.7);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      padding: 14px 0;
+    }
+    .nav-btn {
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.15);
+      color: var(--text);
+      font-size: 0.9rem;
+      transition: all 0.25s ease;
+    }
+    .nav-btn:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    header {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 48px;
+      text-align: center;
+    }
+    h1 { font-size: 2.6rem; font-weight: 700; }
+    .subtitle { color: var(--muted); font-size: 1.1rem; }
+    .badges { justify-content: center; }
+    .badges span {
+      display: inline-block;
+      background: rgba(56,189,248,0.1);
+      color: var(--accent);
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin: 6px 6px 0 0;
+      font-size: 0.85rem;
+    }
+
+    section { margin-bottom: 64px; }
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 28px;
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+    section h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 22px;
+      margin-bottom: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    }
+    .card h3 { margin-bottom: 8px; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 10px; }
+
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 40px 0 10px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <button id="themeToggle" style="position:absolute;right:24px;top:14px;background:transparent;border:1px solid rgba(255,255,255,0.2);color:var(--text);padding:8px 14px;border-radius:999px;cursor:pointer;">🌙</button>
+    <div class="nav-inner">
+      <a class="nav-btn" href="#about">About</a>
+      <a class="nav-btn" href="#experience">Experience</a>
+      <a class="nav-btn" href="#skills">Skills</a>
+      <a class="nav-btn" href="#education">Education</a>
+      <a class="nav-btn" href="#contact">Contact</a>
+    </div>
+  </nav>
+  <div class="container">
+    <header id="about">
+      <h1>Souradrita Sarkar</h1>
+      <p class="subtitle">Software Engineer II | Java | Spring Boot | AWS | Microservices</p>
+      <p style="margin-top:10px;">
+        <a href="mailto:souradrita123@gmail.com">souradrita123@gmail.com</a> ·
+        <a href="https://linkedin.com/in/souradrita1" target="_blank">LinkedIn</a>
+      </p>
+      <div class="badges">
+        <span>Java</span><span>Spring Boot</span><span>Kafka</span><span>AWS</span><span>Kubernetes</span><span>PostgreSQL</span>
+      </div>
+    </header>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="card">
+        <h3>JP Morgan Chase – Software Engineer II</h3>
+        <div class="meta">Sept 2025 – Present · Bengaluru, India</div>
+        <ul>
+          <li>Building secure and seamless digital payment experiences with <b>Paze</b>, a next‑gen contactless wallet.</li>
+          <li>Designed Kafka event recovery & retry mechanism using DB-backed audit trails.</li>
+          <li>Optimized SQL queries using conditional aggregation and composite indexes.</li>
+          <li>Implemented REST APIs for eligibility-based card auto‑provisioning.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Hewlett Packard Enterprise – Software Engineer II</h3>
+        <div class="meta">Oct 2024 – Sept 2025</div>
+        <ul>
+          <li>Built real-time device command pipelines using Kafka (MSK) and Redis.</li>
+          <li>Developed Spring Boot APIs for time-series power and energy metrics.</li>
+          <li>Created Grafana dashboards for real-time monitoring.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Hewlett Packard Enterprise – Software Engineer I</h3>
+        <div class="meta">Aug 2022 – Oct 2024</div>
+        <ul>
+          <li>Worked on Telco Media Platform supporting global voice/video services.</li>
+          <li>Migrated monolith to microservices with Docker & Kubernetes.</li>
+          <li>Improved SNMP & Fluentd trap detection by 20%.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects & Publications</h2>
+      <div class="card">
+        <h3>Centralized Logging with EFK Stack</h3>
+        <p>Built scalable logging using Fluentd, Elasticsearch, and Kibana.</p>
+      </div>
+      <div class="card">
+        <h3>Scam Detection During Voice Calls</h3>
+        <p>Real-time scam detection system integrated with HPE TMP (Python).</p>
+      </div>
+      <div class="card">
+        <h3>Facial Emotion Detection (CNN)</h3>
+        <p>Published research using Inception ResNet V2 & Xception.</p>
+        <a href="https://www.inderscience.com/info/inarticle.php?artid=124351" target="_blank">Publication Link</a>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="card"><b>Languages</b><br>Java, Python, JavaScript, SQL, C++</div>
+        <div class="card"><b>Backend</b><br>Spring Boot, Kafka, REST APIs</div>
+        <div class="card"><b>Cloud & DevOps</b><br>AWS, Kubernetes, Docker</div>
+        <div class="card"><b>Data & Observability</b><br>PostgreSQL, Redis, Elasticsearch, Grafana</div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="card">
+        <h3>PSG College of Technology</h3>
+        <p>B.Tech in Computer Science & Engineering · GPA 9.05</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Email: <a href="mailto:souradrita123@gmail.com">souradrita123@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/souradrita1" target="_blank">linkedin.com/in/souradrita1</a></p>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Souradrita Sarkar · Built for GitHub Pages
+    </footer>
+  </div>
+<script>
+  const toggle = document.getElementById('themeToggle');
+  let dark = true;
+  toggle.onclick = () => {
+    dark = !dark;
+    document.documentElement.style.setProperty('--bg', dark ? '#0f172a' : '#f8fafc');
+    document.documentElement.style.setProperty('--card', dark ? '#111827' : '#ffffff');
+    document.documentElement.style.setProperty('--text', dark ? '#e5e7eb' : '#020617');
+    document.documentElement.style.setProperty('--muted', dark ? '#9ca3af' : '#475569');
+    document.body.style.background = dark ? 'linear-gradient(180deg,#020617,#0f172a)' : '#f8fafc';
+    toggle.textContent = dark ? '🌙' : '☀️';
+  };
+</script>
+</body>
+</html>
+
